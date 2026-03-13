@@ -305,9 +305,6 @@ window.addEventListener('scroll', function() {
     const heroImage = document.querySelector('.hero-image');
     
     if (heroSection && scrolled < heroSection.offsetHeight) {
-        const parallaxSpeed = 0.3;
-        heroSection.style.transform = `translateY(${scrolled * parallaxSpeed}px)`;
-        
         if (heroContent) {
             heroContent.style.opacity = 1 - (scrolled / heroSection.offsetHeight) * 0.5;
             heroContent.style.transform = `translateY(${scrolled * 0.2}px)`;
@@ -315,6 +312,15 @@ window.addEventListener('scroll', function() {
         
         if (heroImage) {
             heroImage.style.transform = `translateY(${scrolled * 0.15}px) scale(${1 - scrolled / heroSection.offsetHeight * 0.1})`;
+        }
+    } else {
+        if (heroContent) {
+            heroContent.style.opacity = '';
+            heroContent.style.transform = '';
+        }
+
+        if (heroImage) {
+            heroImage.style.transform = '';
         }
     }
 });

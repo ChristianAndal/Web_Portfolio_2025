@@ -206,28 +206,94 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 });
 
-// Add typing effect to hero section (optional enhancement)
-function typeWriter(element, text, speed = 100) {
-    let i = 0;
-    element.textContent = '';
-    
-    function type() {
-        if (i < text.length) {
-            element.textContent += text.charAt(i);
-            i++;
-            setTimeout(type, speed);
-        }
+// Add typing effect to hero heading
+function typeWriter(element, text, speed = 85) {
+    if (!element || !text) {
+        return;
     }
-    
-    type();
+
+    if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+        element.textContent = text;
+        element.classList.add('is-complete');
+        return;
+    }
+
+    let index = 0;
+    element.textContent = '';
+    element.classList.remove('is-complete');
+
+    function typeNextCharacter() {
+        if (index < text.length) {
+            element.textContent += text.charAt(index);
+            index += 1;
+            setTimeout(typeNextCharacter, speed);
+            return;
+        }
+
+        element.classList.add('is-complete');
+    }
+
+    typeNextCharacter();
+}
+
+function loopTypingRoles(element, roles, typingSpeed = 70, deletingSpeed = 40, pauseDuration = 1600) {
+    if (!element || !roles.length) {
+        return;
+    }
+
+    if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+        element.textContent = roles[0];
+        return;
+    }
+
+    let roleIndex = 0;
+    let charIndex = 0;
+    let isDeleting = false;
+
+    function tick() {
+        const currentRole = roles[roleIndex];
+
+        if (isDeleting) {
+            charIndex -= 1;
+            element.textContent = currentRole.slice(0, charIndex);
+        } else {
+            charIndex += 1;
+            element.textContent = currentRole.slice(0, charIndex);
+        }
+
+        let delay = isDeleting ? deletingSpeed : typingSpeed;
+
+        if (!isDeleting && charIndex === currentRole.length) {
+            delay = pauseDuration;
+            isDeleting = true;
+        } else if (isDeleting && charIndex === 0) {
+            isDeleting = false;
+            roleIndex = (roleIndex + 1) % roles.length;
+            delay = 350;
+        }
+
+        setTimeout(tick, delay);
+    }
+
+    element.textContent = '';
+    tick();
 }
 
 // Initialize typing effect on page load
 window.addEventListener('load', function() {
-    const heroTitle = document.querySelector('.hero-content h1 span');
+    const heroTitle = document.querySelector('.typing-text');
     if (heroTitle) {
-        const originalText = heroTitle.textContent;
-        typeWriter(heroTitle, originalText, 150);
+        const titleText = heroTitle.dataset.text || heroTitle.textContent.trim();
+        typeWriter(heroTitle, titleText, 90);
+    }
+
+    const heroRole = document.querySelector('.role-typing-text');
+    if (heroRole) {
+        const roles = (heroRole.dataset.roles || heroRole.textContent)
+            .split('|')
+            .map(role => role.trim())
+            .filter(Boolean);
+        loopTypingRoles(heroRole, roles, 75, 42, 1500);
     }
 });
 

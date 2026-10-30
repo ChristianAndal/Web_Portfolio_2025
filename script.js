@@ -78,7 +78,7 @@ if (contactForm) {
             if (!response.ok) throw new Error('Unable to send message.');
 
             formMessage.innerHTML = '<div class="alert alert-success"><i class="bi bi-check-circle"></i> Thanks for reaching out. Your inquiry has been received, and I\'ll get back to you soon.</div>';
-            submitBtn.innerHTML = '<i class="bi bi-check-circle"></i> Request received';
+            submitBtn.innerHTML = originalText;
             form.reset();
         } catch (error) {
             console.error('Contact form error:', error);

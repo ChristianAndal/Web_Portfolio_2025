@@ -542,6 +542,83 @@ section:not(.hero-section) .section-title {
 #contact .social-link { display: inline-grid; place-items: center; width: 42px; height: 42px; margin: 0 .25rem; border: 1px solid rgba(255,255,255,.12); border-radius: 11px; color: #fff !important; background: rgba(255,255,255,.03); }
 #contact .social-link:hover { color: var(--upgrade-ink) !important; background: var(--upgrade-lime); border-color: var(--upgrade-lime); transform: translateY(-3px); }
 
+#contact .contact-actions {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+  gap: 1rem;
+  margin-top: 1.75rem;
+  padding-top: 1.35rem;
+  border-top: 1px solid rgba(255,255,255,.12);
+}
+
+#contact .contact-resume {
+  display: inline-grid;
+  width: 2.65rem;
+  height: 2.65rem;
+  place-items: center;
+  margin: 0 !important;
+  padding: 0 !important;
+  border-color: rgba(255,255,255,.28) !important;
+  color: #fff !important;
+  border-radius: .75rem;
+}
+
+#contact .contact-resume:hover {
+  border-color: var(--upgrade-lime) !important;
+  background: var(--upgrade-lime) !important;
+  color: var(--upgrade-ink) !important;
+}
+
+#contact .social-links {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 0;
+  margin: 0 !important;
+}
+
+#contact .social-links::before {
+  display: none !important;
+  content: none !important;
+}
+
+#contact .social-label {
+  color: rgba(255,255,255,.5);
+  font-size: .62rem;
+  font-weight: 800;
+  letter-spacing: .14em;
+  text-transform: uppercase;
+}
+
+#contact .social-icons {
+  display: flex;
+  gap: .6rem;
+}
+
+#contact .social-icons .social-link {
+  display: inline-grid;
+  width: 2.65rem;
+  height: 2.65rem;
+  place-items: center;
+  margin: 0 !important;
+  border: 1px solid rgba(255,255,255,.18);
+  border-radius: .75rem;
+  color: #fff;
+  background: rgba(255,255,255,.04);
+}
+
+@media (max-width: 575px) {
+  #contact .contact-actions {
+    align-items: center;
+    gap: 1.25rem;
+  }
+
+  #contact .contact-resume { justify-content: center; }
+  #contact .social-links { align-items: center; }
+}
+
 /* ---------- Modal ---------- */
 #projectModal .modal-content { border: 0; border-radius: 22px; overflow: hidden; box-shadow: 0 35px 110px rgba(10,16,32,.28); }
 #projectModal .modal-header { background: var(--upgrade-ink); border-bottom: 1px solid rgba(255,255,255,.08); }
@@ -777,4 +854,31 @@ section[id] { scroll-margin-top: 96px; }
     height: 220px !important;
     min-height: 220px !important;
   }
+}
+
+/* Connect uses a wide screenshot; cover the card media so it does not leave a letterboxed band. */
+#projects .project-featured-col:nth-child(3) .project-image img {
+  object-fit: cover !important;
+  object-position: center top;
+}
+
+/* Keep neighboring project cards the same height and align their content. */
+#projects .row.g-4 {
+  align-items: stretch !important;
+}
+
+#projects .row.g-4 > div {
+  display: flex;
+  align-items: stretch;
+}
+
+#projects .row.g-4 > div .project-card {
+  width: 100%;
+  height: 100% !important;
+}
+
+#projects .row.g-4 > div .project-content {
+  display: flex;
+  flex-direction: column;
+  flex: 1 1 auto;
 }

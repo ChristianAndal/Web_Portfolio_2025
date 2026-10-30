@@ -22,6 +22,18 @@ A beautiful, modern, and fully responsive web portfolio built with HTML, CSS, Ja
 - **JavaScript** - Interactivity and dynamic features
 - **Bootstrap 5** - Responsive grid system and components
 - **Bootstrap Icons** - Beautiful icon library
+- **GSAP + ScrollTrigger** - Reusable, reduced-motion-aware animation utilities loaded via CDN
+
+## Codex frontend workflow
+
+Project-specific frontend guidance lives in `AGENTS.md` and `.codex/skills/`. Read the relevant skill before UI work:
+
+- `frontend-design` for layout and composition
+- `ui-ux-pro-max` for interaction, accessibility, and responsive behavior
+- `impeccable` for visual refinement
+- `gsap` for shared motion utilities
+
+GSAP is configured in `animations/gsap.js`. Add `data-gsap="fade-up"` or `data-gsap="fade-in"` to markup when a simple scroll reveal is appropriate, or call the exposed `window.PortfolioAnimations` helpers for more specific motion. Existing Bootstrap and custom JavaScript behavior remains unchanged.
 
 ## Getting Started
 

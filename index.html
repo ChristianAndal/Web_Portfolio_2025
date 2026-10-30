@@ -1,672 +1,763 @@
 <!DOCTYPE html>
+
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Christian Miguel M. Andal - Portfolio</title>
-    
-    <!-- Bootstrap CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-    <!-- Bootstrap Icons -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.0/font/bootstrap-icons.css">
-    <!-- Custom CSS -->
-    <link rel="stylesheet" href="styles.css">
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="Portfolio of Christian Miguel Andal, a full-stack software engineer building enterprise systems, SaaS products, APIs, and data-driven applications." name="description"/>
+<title>Christian Miguel Andal — Full-Stack Software Engineer</title>
+<!-- Bootstrap CSS -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"/>
+<!-- Bootstrap Icons -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.0/font/bootstrap-icons.css" rel="stylesheet"/>
+<!-- Custom CSS -->
+<link href="styles.css" rel="stylesheet"/><link href="portfolio-upgrade.css" rel="stylesheet"/>
 </head>
 <body>
-    <!-- Navigation -->
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
-        <div class="container">
-            <a class="navbar-brand" href="#home">
-                <i class="bi bi-code-slash"></i> Developer
+<!-- Navigation -->
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+<div class="container">
+<a aria-label="Christian Miguel Andal home" class="navbar-brand" href="#home">
+<span class="brand-mark">&lt;/&gt;</span> Christian Andal
             </a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav ms-auto">
-                    <li class="nav-item">
-                        <a class="nav-link" href="#home">Home</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#about">About</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#projects">Projects</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#experience">Experience</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#education">Education</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#awards">Awards</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#contact">Contact</a>
-                    </li>
-                </ul>
-            </div>
-        </div>
-    </nav>
-
-    <!-- Home Section -->
-    <section id="home" class="hero-section">
-        <div class="container">
-            <div class="row align-items-center min-vh-100">
-                <div class="col-lg-6">
-                    <div class="hero-content">
-                        <h1>
-                            <span class="hero-greeting">Hi, I'm</span>
-                            <span class="typing-text" data-text="Christian Miguel M. Andal">Christian Miguel M. Andal</span>
-                        </h1>
-                        <p class="lead">
-                            <span
-                                class="role-typing-text"
-                                data-roles="Software Developer|AI/ML Enthusiast|Full-Stack Developer|ASP.NET Developer"
-                            >Software Developer</span>
-                        </p>
-                        <p>Software developer with 4 years of experience in programming, problem-solving, and collaboration. Skilled in AI, Machine Learning, and ASP.NET web development, focused on building innovative and efficient solutions.</p>
-                        <div class="hero-buttons">
-                            <a href="#projects" class="btn btn-primary btn-lg me-3">View My Work</a>
-                            <a href="#contact" class="btn btn-outline-light btn-lg">Get In Touch</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-6">
-                    <div class="hero-image">
-                        <img src="profile.png" alt="Christian Miguel M. Andal" class="img-fluid rounded-circle shadow-lg">
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="scroll-indicator">
-            <a href="#about"><i class="bi bi-chevron-down"></i></a>
-        </div>
-    </section>
-
-    <!-- About Me Section -->
-    <section id="about" class="py-5">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-12 text-center mb-5">
-                    <h2 class="section-title">About Me</h2>
-                    <div class="title-underline"></div>
-                </div>
-            </div>
-            <div class="row align-items-center">
-                <div class="col-lg-6 mb-4 mb-lg-0">
-                    <div class="about-image">
-                        <img src="/IMG_0035.JPG" alt="Christian Miguel M. Andal" class="img-fluid rounded">
-                    </div>
-                </div>
-                <div class="col-lg-6">
-                    <h3 class="mb-4">I'm a Passionate Software Developer</h3>
-                    <p class="mb-3">Software Developer with 4+ years of experience building scalable full-stack applications using Python, ASP.NET, Laravel, and Vue.js. Experienced in developing and supporting ERP, CRM, accounting, and HRIS systems, including financial management, reporting, and business process automation.</p>
-                    <p class="mb-3">Strong background in database management with SQL Server (SSMS) and developing data-driven solutions. Skilled in applied machine learning using ML.NET, integrating predictive models and intelligent features into business applications.</p>
-                    <p class="mb-4">Passionate about leveraging software engineering and AI technologies to build efficient, scalable, and impactful systems that drive business growth and innovation.</p>
-                    <h4 class="mb-3">Skills</h4>
-                    <div class="skills-container">
-                        <span class="skill-badge">Java</span>
-                        <span class="skill-badge">PHP</span>
-                        <span class="skill-badge">C#</span>
-                        <span class="skill-badge">JavaScript</span>
-                        <span class="skill-badge">Python</span>
-                        <span class="skill-badge">Django</span>
-                        <span class="skill-badge">ASP.NET</span>
-                        <span class="skill-badge">Android Studio</span>
-                        <span class="skill-badge">ML.NET</span>
-                        <span class="skill-badge">REST API</span>
-                        <span class="skill-badge">HTML</span>
-                        <span class="skill-badge">CSS</span>
-                        <span class="skill-badge">Bootstrap</span>
-                        <span class="skill-badge">Vue.js</span>
-                        <span class="skill-badge">PostgreSQL</span>
-                        <span class="skill-badge">SSMS</span>
-                        <span class="skill-badge">SQL</span>
-                        <span class="skill-badge">Power BI</span>
-                        <span class="skill-badge">GitHub</span>
-                        <span class="skill-badge">XAMPP</span>
-                        <span class="skill-badge">CRM</span>
-                        <span class="skill-badge">ERP</span>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Featured Projects Section -->
-    <section id="projects" class="py-5 bg-light">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-12 text-center mb-5">
-                    <h2 class="section-title">Featured Projects</h2>
-                    <div class="title-underline"></div>
-                    <p class="text-muted">Some of my recent work and projects</p>
-                </div>
-            </div>
-            <div class="row g-4">
-                <div class="col-md-6 col-lg-4">
-                    <div class="project-card" data-project="goventure">
-                        <div class="project-image">
-                            <img src="Goventure/goventure.jpg" alt="GoVenture ERP" class="img-fluid">
-                            <div class="project-overlay">
-                                <div class="project-links">
-                                    <a href="#" class="project-link"><i class="bi bi-link-45deg"></i></a>
-                                    <a href="#" class="project-link"><i class="bi bi-github"></i></a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="project-content">
-                            <h4>GoVenture ERP</h4>
-                            <p>Enterprise Resource Planning system developed using Python Django framework with SSMS database integration. Streamlining business processes and operations management for enhanced efficiency and productivity.</p>
-                            <div class="project-tags">
-                                <span class="tag">Python</span>
-                                <span class="tag">Django</span>
-                                <span class="tag">SSMS</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-6 col-lg-4">
-                    <div class="project-card" data-project="connect">
-                        <div class="project-image">
-                            <img src="Connect/main.png" alt="Connect Social Media Platform" class="img-fluid">
-                            <div class="project-overlay">
-                                <div class="project-links">
-                                    <a href="#" class="project-link"><i class="bi bi-link-45deg"></i></a>
-                                    <a href="#" class="project-link"><i class="bi bi-github"></i></a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="project-content">
-                            <h4>Connect: Social Media Platform</h4>
-                            <p>Developing a social media platform using Python Django framework with real-time interactions via WebSockets for live chats, instant notifications, and dynamic user interactions.</p>
-                            <div class="project-tags">
-                                <span class="tag">Python</span>
-                                <span class="tag">Django</span>
-                                <span class="tag">WebSockets</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-6 col-lg-4">
-                    <div class="project-card" data-project="mastermoto">
-                        <div class="project-image">
-                            <img src="Moto/dash.png" alt="MasterMoto DSS" class="img-fluid">
-                            <div class="project-overlay">
-                                <div class="project-links">
-                                    <a href="#" class="project-link"><i class="bi bi-link-45deg"></i></a>
-                                    <a href="#" class="project-link"><i class="bi bi-github"></i></a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="project-content">
-                            <h4>MasterMoto: Inventory Optimization DSS</h4>
-                            <p>Web-based inventory optimization and demand forecasting system using ML.NET, integrated with POS platform to automate restocking. Improved inventory management by reducing stockouts.</p>
-                            <div class="project-tags">
-                                <span class="tag">ASP.NET</span>
-                                <span class="tag">ML.NET</span>
-                                <span class="tag">C#</span>
-                                <span class="tag">SSMS</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-6 col-lg-4">
-                    <div class="project-card" data-project="catsaway">
-                        <div class="project-image">
-                            <img src="cats/game1.png" alt="Cats Away RPG" class="img-fluid">
-                            <div class="project-overlay">
-                                <div class="project-links">
-                                    <a href="#" class="project-link"><i class="bi bi-link-45deg"></i></a>
-                                    <a href="#" class="project-link"><i class="bi bi-github"></i></a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="project-content">
-                            <h4>Cats Away RPG Game</h4>
-                            <p>Built a role-playing game in Unity using C# with focus on gameplay mechanics, user interactions, and environment design. Designed engaging player experiences to enhance user retention.</p>
-                            <div class="project-tags">
-                                <span class="tag">Unity</span>
-                                <span class="tag">C#</span>
-                                <span class="tag">Game Development</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-6 col-lg-4">
-                    <div class="project-card" data-project="company-management">
-                        <div class="project-image">
-                            <img src="company/dash.png" alt="Company Management System" class="img-fluid">
-                            <div class="project-overlay">
-                                <div class="project-links">
-                                    <a href="#" class="project-link"><i class="bi bi-link-45deg"></i></a>
-                                    <a href="#" class="project-link"><i class="bi bi-github"></i></a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="project-content">
-                            <h4>Company Management System with QR Code Attendance</h4>
-                            <p>PHP-based system with QR code attendance to automate attendance tracking. Utilized HTML, CSS, JavaScript, and XAMPP for frontend and backend development.</p>
-                            <div class="project-tags">
-                                <span class="tag">PHP</span>
-                                <span class="tag">HTML</span>
-                                <span class="tag">CSS</span>
-                                <span class="tag">JavaScript</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-6 col-lg-4">
-                    <div class="project-card" data-project="etcetera">
-                        <div class="project-image">
-                            <img src="ecom/1.png" alt="Etcetera Ecommerce" class="img-fluid">
-                            <div class="project-overlay">
-                                <div class="project-links">
-                                    <a href="#" class="project-link"><i class="bi bi-link-45deg"></i></a>
-                                    <a href="#" class="project-link"><i class="bi bi-github"></i></a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="project-content">
-                            <h4>Etcetera Ecommerce Website</h4>
-                            <p>Built a robust e-commerce platform to streamline company operations and enhance efficiency. Developed using HTML, CSS, and JavaScript with advanced features for improved user experience.</p>
-                            <div class="project-tags">
-                                <span class="tag">HTML</span>
-                                <span class="tag">CSS</span>
-                                <span class="tag">JavaScript</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Experience Section -->
-    <section id="experience" class="py-5">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-12 text-center mb-5">
-                    <h2 class="section-title">Professional Experience</h2>
-                    <div class="title-underline"></div>
-                    <p class="text-muted">My career journey and professional achievements</p>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-lg-10 mx-auto">
-                    <div class="experience-timeline">
-                        <div class="experience-item">
-                            <div class="experience-icon">
-                                <i class="bi bi-briefcase-fill"></i>
-                            </div>
-                            <div class="experience-content">
-                                <div class="experience-header">
-                                    <div>
-                                        <h4>Full Stack Web Developer</h4>
-                                        <h5>Wizzard Technologies INC - Ortigas, Pasig City</h5>
-                                    </div>
-                                    <span class="experience-date">July 2025 - Current</span>
-                                </div>
-                                <p class="experience-description">Developing and maintaining full-stack web applications using Laravel for backend services and Vue.js for frontend development. Managing SSMS database systems and implementing robust, scalable solutions for enterprise clients, including accounting, HRIS, and financial management platforms.</p>
-                                <ul class="experience-description">
-                                    <li>Contributed to the development of the Accounting System for the University of the Philippines, focusing on both frontend and backend development using Laravel and Vue.js.</li>
-                                    <li>Assisted in the creation of the RFID Android Application for the Department of Energy, enhancing application features using Android Studio.</li>
-                                    <li>Developed the CBSUA Financial Management System for Central Bicol State University of Agriculture, streamlining financial operations for accounting, reporting, and data management.</li>
-                                    <li>Designed and developed a Modern Financial Management System for private companies, implementing scalable architecture for improved financial tracking and reporting.</li>
-                                    <li>Created and developed the Barangay Accounting System for Quezon City barangays, improving financial management, reporting, and accounting processes for local government units.</li>
-                                    <li>Developed a Hotel Reservation Android App using Android Studio.</li>
-                                    <li>Built the NLRC HRIS ePortal using Laravel and Vue.js.</li>
-                                </ul>
-                                <div class="experience-achievements">
-                                    <span class="achievement-badge"><i class="bi bi-check-circle"></i> Full-Stack Web Development</span>
-                                    <span class="achievement-badge"><i class="bi bi-check-circle"></i> Laravel Backend Development</span>
-                                    <span class="achievement-badge"><i class="bi bi-check-circle"></i> Vue.js Frontend Development</span>
-                                    <span class="achievement-badge"><i class="bi bi-check-circle"></i> Android Studio Development</span>
-                                    <span class="achievement-badge"><i class="bi bi-check-circle"></i> Database Management with SSMS</span>
-                                </div>
-                                <div class="experience-skills">
-                                    <span class="skill-tag">Laravel</span>
-                                    <span class="skill-tag">Vue.js</span>
-                                    <span class="skill-tag">Android Studio</span>
-                                    <span class="skill-tag">SSMS</span>
-                                    <span class="skill-tag">PHP</span>
-                                    <span class="skill-tag">JavaScript</span>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="experience-item">
-                            <div class="experience-icon">
-                                <i class="bi bi-briefcase-fill"></i>
-                            </div>
-                            <div class="experience-content">
-                                <div class="experience-header">
-                                    <div>
-                                        <h4>Technical Consultant - Microsoft Business Central</h4>
-                                        <h5>Systema Solutions Canada (Internship)</h5>
-                                    </div>
-                                    <span class="experience-date">January 2025 - April 2025</span>
-                                </div>
-                                <p class="experience-description">Provided support and optimization for Microsoft Business Central business solutions. Contributed to AL programming to customize and extend Business Central functionality. Performed data analysis and reporting with Power BI, providing insights to support better decision-making.</p>
-                                <div class="experience-achievements">
-                                    <span class="achievement-badge"><i class="bi bi-check-circle"></i> AL Programming for Business Central</span>
-                                    <span class="achievement-badge"><i class="bi bi-check-circle"></i> Power BI Data Analysis</span>
-                                    <span class="achievement-badge"><i class="bi bi-check-circle"></i> Business Solution Optimization</span>
-                                </div>
-                                <div class="experience-skills">
-                                    <span class="skill-tag">AL Programming</span>
-                                    <span class="skill-tag">Power BI</span>
-                                    <span class="skill-tag">Microsoft Business Central</span>
-                                    <span class="skill-tag">Data Analysis</span>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="experience-item">
-                            <div class="experience-icon">
-                                <i class="bi bi-briefcase-fill"></i>
-                            </div>
-                            <div class="experience-content">
-                                <div class="experience-header">
-                                    <div>
-                                        <h4>Fullstack Developer - ASP.NET Web POS System</h4>
-                                        <h5>MotoNation (Project-Based Work)</h5>
-                                    </div>
-                                    <span class="experience-date">July 2023 - December 2024</span>
-                                </div>
-                                <p class="experience-description">Focused on developing backend functionalities for the POS system. Managed SSMS database, including creating triggers and stored procedures. Implemented audit trailing features for system integrity, built reports using RDLC, and designed dashboards for improved data visualization and decision-making.</p>
-                                <div class="experience-achievements">
-                                    <span class="achievement-badge"><i class="bi bi-check-circle"></i> Backend Development for POS System</span>
-                                    <span class="achievement-badge"><i class="bi bi-check-circle"></i> Database Management & Optimization</span>
-                                    <span class="achievement-badge"><i class="bi bi-check-circle"></i> RDLC Reporting Implementation</span>
-                                    <span class="achievement-badge"><i class="bi bi-check-circle"></i> Dashboard Design & Development</span>
-                                </div>
-                                <div class="experience-skills">
-                                    <span class="skill-tag">ASP.NET</span>
-                                    <span class="skill-tag">C#</span>
-                                    <span class="skill-tag">SSMS</span>
-                                    <span class="skill-tag">RDLC</span>
-                                    <span class="skill-tag">SQL</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Education Section -->
-    <section id="education" class="py-5">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-12 text-center mb-5">
-                    <h2 class="section-title">Education</h2>
-                    <div class="title-underline"></div>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-lg-10 mx-auto">
-                    <div class="timeline">
-                        <div class="timeline-item">
-                            <div class="timeline-icon">
-                                <i class="bi bi-mortarboard"></i>
-                            </div>
-                            <div class="timeline-content">
-                                <h4>Bachelor of Science in Computer Science</h4>
-                                <h5>STI College Novaliches / STI College Marikina</h5>
-                                <span class="timeline-date">2021 - 2025</span>
-                                <p>Graduated with Latin honors (Cum Laude). Achievements include President's Dean's Lister, Most Commendable System Analyst, Best Software Quality Assurance, and Certificate of Appreciation for Peer Evaluation.</p>
-                            </div>
-                        </div>
-                        <div class="timeline-item">
-                            <div class="timeline-icon">
-                                <i class="bi bi-mortarboard"></i>
-                            </div>
-                            <div class="timeline-content">
-                                <h4>Accountancy Business and Management</h4>
-                                <h5>Siena College of Taytay</h5>
-                                <span class="timeline-date">2019 - 2021</span>
-                                <p>Completed senior high school program in Accountancy Business and Management track.</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Awards Section -->
-    <section id="awards" class="py-5 bg-light">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-12 text-center mb-5">
-                    <h2 class="section-title">Awards & Recognition</h2>
-                    <div class="title-underline"></div>
-                </div>
-            </div>
-            <div class="row g-4">
-                <div class="col-md-6 col-lg-4">
-                    <div class="award-card">
-                        <div class="award-icon">
-                            <i class="bi bi-trophy-fill"></i>
-                        </div>
-                        <h4>Latin Honors (Cum Laude)</h4>
-                        <h5>STI College</h5>
-                        <p>Graduated with honors for outstanding academic performance.</p>
-                        <span class="award-date">2025</span>
-                    </div>
-                </div>
-                <div class="col-md-6 col-lg-4">
-                    <div class="award-card">
-                        <div class="award-icon">
-                            <i class="bi bi-star-fill"></i>
-                        </div>
-                        <h4>Best Software Quality Assurance</h4>
-                        <h5>STI College</h5>
-                        <p>Recognized for excellence in software quality assurance practices.</p>
-                        <span class="award-date">2025</span>
-                    </div>
-                </div>
-                <div class="col-md-6 col-lg-4">
-                    <div class="award-card">
-                        <div class="award-icon">
-                            <i class="bi bi-award-fill"></i>
-                        </div>
-                        <h4>Most Commendable System Analyst</h4>
-                        <h5>STI College</h5>
-                        <p>Awarded for outstanding performance in system analysis.</p>
-                        <span class="award-date">2025</span>
-                    </div>
-                </div>
-                <div class="col-md-6 col-lg-4">
-                    <div class="award-card">
-                        <div class="award-icon">
-                            <i class="bi bi-trophy-fill"></i>
-                        </div>
-                        <h4>Most Commendable Information Management Project</h4>
-                        <h5>STI College</h5>
-                        <p>Recognized for excellence in information management project development.</p>
-                        <span class="award-date">2025</span>
-                    </div>
-                </div>
-                <div class="col-md-6 col-lg-4">
-                    <div class="award-card">
-                        <div class="award-icon">
-                            <i class="bi bi-star-fill"></i>
-                        </div>
-                        <h4>President's Dean's Lister</h4>
-                        <h5>STI College</h5>
-                        <p>Achieved consistent academic excellence throughout studies.</p>
-                        <span class="award-date">2021-2025</span>
-                    </div>
-                </div>
-                <div class="col-md-6 col-lg-4">
-                    <div class="award-card">
-                        <div class="award-icon">
-                            <i class="bi bi-award-fill"></i>
-                        </div>
-                        <h4>Certificate of Appreciation for Peer Evaluation</h4>
-                        <h5>STI College</h5>
-                        <p>Recognized for valuable contributions to peer evaluation processes.</p>
-                        <span class="award-date">2025</span>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Contact Section -->
-    <section id="contact" class="py-5">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-12 text-center mb-5">
-                    <h2 class="section-title">Get In Touch</h2>
-                    <div class="title-underline"></div>
-                    <p class="text-muted">I'm always open to discussing new projects and opportunities.</p>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-lg-8 mx-auto">
-                    <div class="row g-4 mb-5">
-                        <div class="col-md-4 text-center">
-                            <div class="contact-info">
-                                <div class="contact-icon">
-                                    <i class="bi bi-envelope-fill"></i>
-                                </div>
-                                <h5>Email</h5>
-                                <p>christianmiguelandal@gmail.com</p>
-                            </div>
-                        </div>
-                        <div class="col-md-4 text-center">
-                            <div class="contact-info">
-                                <div class="contact-icon">
-                                    <i class="bi bi-telephone-fill"></i>
-                                </div>
-                                <h5>Phone</h5>
-                                <p>09616198038</p>
-                            </div>
-                        </div>
-                        <div class="col-md-4 text-center">
-                            <div class="contact-info">
-                                <div class="contact-icon">
-                                    <i class="bi bi-geo-alt-fill"></i>
-                                </div>
-                                <h5>Location</h5>
-                                <p>Pasig City, Philippines</p>
-                            </div>
-                        </div>
-                    </div>
-                    <form id="contactForm" class="contact-form">
-                        <div class="row g-3">
-                            <div class="col-md-6">
-                                <input type="text" name="from_name" id="from_name" class="form-control" placeholder="Your Name" required>
-                            </div>
-                            <div class="col-md-6">
-                                <input type="email" name="from_email" id="from_email" class="form-control" placeholder="Your Email" required>
-                            </div>
-                            <div class="col-12">
-                                <input type="text" name="subject" id="subject" class="form-control" placeholder="Subject" required>
-                            </div>
-                            <div class="col-12">
-                                <textarea name="message" id="message" class="form-control" rows="5" placeholder="Your Message" required></textarea>
-                            </div>
-                            <div class="col-12 text-center">
-                                <div id="formMessage" class="mb-3"></div>
-                                <button type="submit" class="btn btn-primary btn-lg">Send Message</button>
-                            </div>
-                        </div>
-                    </form>
-                    <div class="text-center mt-4">
-                        <a href="Christian_Miguel_Andal_Resume.pdf" class="btn btn-outline-primary btn-lg" download>
+<button aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation" class="navbar-toggler" data-bs-target="#navbarNav" data-bs-toggle="collapse" type="button">
+<span class="navbar-toggler-icon"></span>
+</button>
+<div class="collapse navbar-collapse" id="navbarNav">
+<ul class="navbar-nav ms-auto">
+<li class="nav-item">
+<a class="nav-link" href="#home">Home</a>
+</li>
+<li class="nav-item">
+<a class="nav-link" href="#about">About</a>
+</li>
+<li class="nav-item">
+<a class="nav-link" href="#projects">Projects</a>
+</li>
+<li class="nav-item">
+<a class="nav-link" href="#experience">Experience</a>
+</li>
+<li class="nav-item">
+<a class="nav-link" href="#education">Education</a>
+</li>
+<li class="nav-item">
+<a class="nav-link" href="#awards">Awards</a>
+</li>
+<li class="nav-item">
+<a class="nav-link" href="#contact">Contact</a>
+</li>
+</ul>
+</div>
+<a class="nav-resume" href="Christian_Miguel_Andal_Resume.pdf" rel="noopener" target="_blank">Resume <i class="bi bi-arrow-up-right"></i></a>
+</div>
+</nav>
+<!-- Home Section -->
+<section class="hero-section" id="home">
+<div class="container">
+<div class="row align-items-center min-vh-100 hero-grid">
+<div class="col-lg-7">
+<div class="hero-content">
+<div class="hero-status-row">
+<p class="hero-kicker"><span></span> Full-stack software engineer · Philippines</p>
+<span class="availability-pill"><i></i> Open to meaningful builds</span>
+</div>
+<h1 class="hero-title">
+<span class="hero-name">Christian Miguel Andal</span>
+<span class="hero-statement">I engineer <em>reliable systems</em> from interface to infrastructure.</span>
+</h1>
+<p class="hero-summary">Full-stack developer working across Laravel, Vue, Django, Oracle APEX, APIs, databases, and enterprise workflows — focused on software that is maintainable, useful, and ready to ship.</p>
+<div class="hero-buttons">
+<a class="btn btn-primary btn-lg" href="#projects">View selected work <i class="bi bi-arrow-down-right"></i></a>
+<a class="btn btn-outline-light btn-lg" href="Christian_Miguel_Andal_Resume.pdf" rel="noopener" target="_blank">View résumé <i class="bi bi-arrow-up-right"></i></a>
+</div>
+<div aria-label="Engineering capabilities" class="hero-capabilities">
+<div><span>01</span><strong>Full-stack</strong><small>Laravel · Vue · Django</small></div>
+<div><span>02</span><strong>Enterprise</strong><small>HRIS · FMIS · ERP</small></div>
+<div><span>03</span><strong>Cloud &amp; data</strong><small>Oracle · SQL · APIs</small></div>
+</div>
+</div>
+</div>
+<div class="col-lg-5">
+<div aria-label="Portrait and developer profile" class="hero-visual">
+<div class="hero-window-bar"><span></span><span></span><span></span><small>portfolio.profile</small></div>
+<div class="hero-image">
+<img alt="Christian Miguel Andal" class="img-fluid" src="profile.png"/>
+</div>
+<div class="hero-visual-caption">
+<span>BUILD / ARCHITECT / SHIP</span>
+<strong>Software for real workflows.</strong>
+</div>
+<div class="floating-chip chip-a"><i class="bi bi-code-slash"></i> Product engineering</div>
+<div class="floating-chip chip-b"><i class="bi bi-database"></i> Data-driven systems</div>
+</div>
+</div>
+</div>
+</div>
+<div class="scroll-indicator">
+<a href="#about"><i class="bi bi-chevron-down"></i></a>
+</div>
+</section>
+<section aria-label="Professional highlights" class="proof-strip">
+<div class="container">
+<div class="proof-grid"><div><strong>5+</strong><span>years building software</span></div><div><strong>Full-stack</strong><span>interface → API → database</span></div><div><strong>Enterprise</strong><span>government &amp; business systems</span></div><div><strong>Cum Laude</strong><span>Computer Science graduate</span></div></div>
+</div>
+</section>
+<!-- About Me Section -->
+<section class="py-5" id="about">
+<div class="container">
+<div class="row">
+<div class="col-lg-12 text-center mb-5"><p class="eyebrow">01 / PROFILE</p><h2 class="section-title">Engineering with a systems mindset.</h2><div class="title-underline"></div><p class="section-intro">I work across product, backend, frontend, data, and enterprise workflows — with a focus on solving operational problems through dependable software.</p></div>
+</div>
+<div class="row align-items-center">
+<div class="col-lg-6 mb-4 mb-lg-0">
+<div class="about-image">
+<img alt="Christian Miguel M. Andal" class="img-fluid rounded" loading="lazy" src="IMG_0035.JPG"/>
+</div>
+</div>
+<div class="col-lg-6">
+<p class="eyebrow">01 / THE ENGINEER</p>
+<h3 class="mb-4">I translate complex workflows into software people can rely on.</h3>
+<p class="mb-3">Software Developer with 5+ years of experience building scalable full-stack applications using Python, ASP.NET, Laravel, and Vue.js. Experienced in developing and supporting ERP, CRM, accounting, HRIS, and financial management systems across business and public-sector environments.</p>
+<p class="mb-3">I have developed accounting and private enterprise systems, as well as government-facing applications aligned with operational requirements, compliance expectations, and established standards for reporting, records, approvals, and data management.</p>
+<p class="mb-3">Strong background in SQL Server (SSMS), data-driven solutions, and applied machine learning with ML.NET. I build software with attention to maintainability, reliable workflows, clear reporting, and practical user needs.</p>
+<p class="mb-4">I also founded GoVenture to turn product ideas into deployable software, leading technical direction, architecture, and the development of SaaS products such as Vicinity from concept through production readiness.</p>
+<h4 class="mb-3">Technical range</h4>
+<div class="skills-container skill-groups">
+<div class="skill-group"><span class="skill-group-label">Frontend</span><div>
+<span class="skill-badge">Vue.js</span><span class="skill-badge">JavaScript</span><span class="skill-badge">HTML</span><span class="skill-badge">CSS</span><span class="skill-badge">Bootstrap</span></div></div>
+<div class="skill-group"><span class="skill-group-label">Backend</span><div>
+<span class="skill-badge">Laravel</span><span class="skill-badge">PHP</span><span class="skill-badge">C#</span><span class="skill-badge">ASP.NET</span><span class="skill-badge">Django</span><span class="skill-badge">REST API</span></div></div>
+<div class="skill-group"><span class="skill-group-label">Data &amp; systems</span><div>
+<span class="skill-badge">Java</span>
+<span class="skill-badge">Python</span>
+<span class="skill-badge">Android Studio</span>
+<span class="skill-badge">ML.NET</span>
+<span class="skill-badge">PostgreSQL</span>
+<span class="skill-badge">SSMS</span>
+<span class="skill-badge">SQL</span>
+<span class="skill-badge">Power BI</span>
+<span class="skill-badge">Oracle APEX</span>
+<span class="skill-badge">CRM</span>
+<span class="skill-badge">ERP</span>
+</div></div>
+<div class="skill-group"><span class="skill-group-label">Tools</span><div>
+<span class="skill-badge">GitHub</span><span class="skill-badge">XAMPP</span><span class="skill-badge">Power BI</span></div></div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Featured Projects Section -->
+<section class="py-5 bg-light" id="projects">
+<div class="container">
+<div class="row">
+<div class="col-lg-12 text-center mb-5"><p class="eyebrow">02 / SELECTED WORK</p><h2 class="section-title">Systems built to solve real problems.</h2><div class="title-underline"></div><p class="section-intro">A focused selection of SaaS platforms, business systems, real-time products, decision-support tools, and software experiments.</p></div>
+</div>
+<div class="row g-4">
+<div class="col-md-6 col-lg-4 project-featured-col">
+<div aria-label="Open Vicinity SaaS POS case study" class="project-card" data-project="vicinity" role="button" tabindex="0">
+<div class="project-image">
+<img alt="Vicinity SaaS landing page and workspace overview" class="img-fluid" decoding="async" loading="lazy" src="VIcinity/1.png"/>
+<div class="project-overlay">
+<div class="project-links">
+<a class="project-link" href="#"><i class="bi bi-link-45deg"></i></a>
+<a class="project-link" href="#"><i class="bi bi-github"></i></a>
+</div>
+</div>
+</div>
+<div class="project-content">
+<div class="project-meta"><span>01</span><span>LATEST · SAAS POS · MULTI-TENANT</span></div>
+<h4>Vicinity — Multi-Tenant SaaS POS</h4>
+<p>Online SaaS point-of-sale platform developed by GoVenture for multi-tenant businesses, combining real-time operations with a hybrid database architecture for flexible day-to-day commerce workflows.</p>
+<div class="project-tags">
+<span class="tag">Django</span>
+<span class="tag">Python</span>
+<span class="tag">PostgreSQL</span>
+<span class="tag">Vue.js</span>
+</div>
+<span class="project-cta">View case study <i class="bi bi-arrow-up-right"></i></span></div>
+</div>
+</div>
+<div class="col-md-6 col-lg-4 project-featured-col">
+<div aria-label="Open project case study" class="project-card" data-project="goventure" role="button" tabindex="0">
+<div class="project-image">
+<img alt="GoVenture ERP dashboard" class="img-fluid" decoding="async" loading="lazy" src="Goventure/1.png"/>
+<div class="project-overlay">
+<div class="project-links">
+<a class="project-link" href="#"><i class="bi bi-link-45deg"></i></a>
+<a class="project-link" href="#"><i class="bi bi-github"></i></a>
+</div>
+</div>
+</div>
+<div class="project-content">
+<div class="project-meta"><span>02</span><span>ERP · BUSINESS SYSTEM</span></div>
+<h4>GoVenture ERP</h4>
+<p>Enterprise Resource Planning system developed using Python Django framework with SSMS database integration. Streamlining business processes and operations management for enhanced efficiency and productivity.</p>
+<div class="project-tags">
+<span class="tag">Python</span>
+<span class="tag">Django</span>
+<span class="tag">SSMS</span>
+</div>
+<span class="project-cta">View case study <i class="bi bi-arrow-up-right"></i></span></div>
+</div>
+</div>
+<div class="col-md-6 col-lg-4 project-featured-col">
+<div aria-label="Open project case study" class="project-card" data-project="connect" role="button" tabindex="0">
+<div class="project-image">
+<img alt="Connect Social Media Platform" class="img-fluid" decoding="async" loading="lazy" src="Connect/main.png"/>
+<div class="project-overlay">
+<div class="project-links">
+<a class="project-link" href="#"><i class="bi bi-link-45deg"></i></a>
+<a class="project-link" href="#"><i class="bi bi-github"></i></a>
+</div>
+</div>
+</div>
+<div class="project-content">
+<div class="project-meta"><span>03</span><span>REAL-TIME PRODUCT</span></div>
+<h4>Connect: Social Media Platform</h4>
+<p>Developing a social media platform using Python Django framework with real-time interactions via WebSockets for live chats, instant notifications, and dynamic user interactions.</p>
+<div class="project-tags">
+<span class="tag">Python</span>
+<span class="tag">Django</span>
+<span class="tag">WebSockets</span>
+</div>
+<span class="project-cta">View case study <i class="bi bi-arrow-up-right"></i></span></div>
+</div>
+</div>
+<div class="col-md-6 col-lg-4 project-featured-col">
+<div aria-label="Open project case study" class="project-card" data-project="mastermoto" role="button" tabindex="0">
+<div class="project-image">
+<img alt="MasterMoto DSS" class="img-fluid" decoding="async" loading="lazy" src="Moto/dash.png"/>
+<div class="project-overlay">
+<div class="project-links">
+<a class="project-link" href="#"><i class="bi bi-link-45deg"></i></a>
+<a class="project-link" href="#"><i class="bi bi-github"></i></a>
+</div>
+</div>
+</div>
+<div class="project-content">
+<div class="project-meta"><span>04</span><span>DECISION SUPPORT · ML</span></div>
+<h4>MasterMoto: Inventory Optimization DSS</h4>
+<p>Web-based inventory optimization and demand forecasting system using ML.NET, integrated with POS platform to automate restocking. Improved inventory management by reducing stockouts.</p>
+<div class="project-tags">
+<span class="tag">ASP.NET</span>
+<span class="tag">ML.NET</span>
+<span class="tag">C#</span>
+<span class="tag">SSMS</span>
+</div>
+<span class="project-cta">View case study <i class="bi bi-arrow-up-right"></i></span></div>
+</div>
+</div>
+<div class="col-md-6 col-lg-4">
+<div aria-label="Open project case study" class="project-card" data-project="catsaway" role="button" tabindex="0">
+<div class="project-image">
+<img alt="Cats Away RPG" class="img-fluid" decoding="async" loading="lazy" src="cats/game1.png"/>
+<div class="project-overlay">
+<div class="project-links">
+<a class="project-link" href="#"><i class="bi bi-link-45deg"></i></a>
+<a class="project-link" href="#"><i class="bi bi-github"></i></a>
+</div>
+</div>
+</div>
+<div class="project-content">
+<h4>Cats Away RPG Game</h4>
+<p>Built a role-playing game in Unity using C# with focus on gameplay mechanics, user interactions, and environment design. Designed engaging player experiences to enhance user retention.</p>
+<div class="project-tags">
+<span class="tag">Unity</span>
+<span class="tag">C#</span>
+<span class="tag">Game Development</span>
+</div>
+<span class="project-cta">View case study <i class="bi bi-arrow-up-right"></i></span></div>
+</div>
+</div>
+<div class="col-md-6 col-lg-4">
+<div aria-label="Open Health Care Management System case study" class="project-card" data-project="healthcare-management" role="button" tabindex="0">
+<div class="project-image">
+<img alt="Health Care Management System dashboard" class="img-fluid" decoding="async" loading="lazy" src="new content/care/1.png"/>
+<div class="project-overlay">
+<div class="project-links">
+<a class="project-link" href="#"><i class="bi bi-link-45deg"></i></a>
+<a class="project-link" href="#"><i class="bi bi-github"></i></a>
+</div>
+</div>
+</div>
+<div class="project-content">
+<h4>Health Care Management System</h4>
+<p>Clinic management platform built with Django to organize patient records, appointment workflows, medical information, staff operations, and day-to-day healthcare processes in one centralized system.</p>
+<div class="project-tags">
+<span class="tag">Python</span>
+<span class="tag">Django</span>
+<span class="tag">SQLite</span>
+</div>
+<span class="project-cta">View case study <i class="bi bi-arrow-up-right"></i></span></div>
+</div>
+</div>
+<div class="col-md-6 col-lg-4">
+<div aria-label="Open project case study" class="project-card" data-project="company-management" role="button" tabindex="0">
+<div class="project-image">
+<img alt="Company Management System" class="img-fluid" decoding="async" loading="lazy" src="company/dash.png"/>
+<div class="project-overlay">
+<div class="project-links">
+<a class="project-link" href="#"><i class="bi bi-link-45deg"></i></a>
+<a class="project-link" href="#"><i class="bi bi-github"></i></a>
+</div>
+</div>
+</div>
+<div class="project-content">
+<h4>Company Management System with QR Code Attendance</h4>
+<p>PHP-based system with QR code attendance to automate attendance tracking. Utilized HTML, CSS, JavaScript, and XAMPP for frontend and backend development.</p>
+<div class="project-tags">
+<span class="tag">PHP</span>
+<span class="tag">HTML</span>
+<span class="tag">CSS</span>
+<span class="tag">JavaScript</span>
+</div>
+<span class="project-cta">View case study <i class="bi bi-arrow-up-right"></i></span></div>
+</div>
+</div>
+<div class="col-md-6 col-lg-4">
+<div aria-label="Open project case study" class="project-card" data-project="etcetera" role="button" tabindex="0">
+<div class="project-image">
+<img alt="Etcetera Ecommerce" class="img-fluid" decoding="async" loading="lazy" src="ecom/1.png"/>
+<div class="project-overlay">
+<div class="project-links">
+<a class="project-link" href="#"><i class="bi bi-link-45deg"></i></a>
+<a class="project-link" href="#"><i class="bi bi-github"></i></a>
+</div>
+</div>
+</div>
+<div class="project-content">
+<h4>Etcetera Ecommerce Website</h4>
+<p>Built a robust e-commerce platform to streamline company operations and enhance efficiency. Developed using HTML, CSS, and JavaScript with advanced features for improved user experience.</p>
+<div class="project-tags">
+<span class="tag">HTML</span>
+<span class="tag">CSS</span>
+<span class="tag">JavaScript</span>
+</div>
+<span class="project-cta">View case study <i class="bi bi-arrow-up-right"></i></span></div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Experience Section -->
+<section class="py-5" id="experience">
+<div class="container">
+<div class="row">
+<div class="col-lg-12 text-center mb-5"><p class="eyebrow">03 / EXPERIENCE</p><h2 class="section-title">From implementation to technical direction.</h2><div class="title-underline"></div><p class="section-intro">Experience across SaaS product leadership, full-stack delivery, enterprise consulting, and production business systems.</p></div>
+</div>
+<div class="row">
+<div class="col-lg-10 mx-auto">
+<div class="experience-timeline">
+<div class="experience-item">
+<div class="experience-icon">
+<i class="bi bi-briefcase-fill"></i>
+</div>
+<div class="experience-content">
+<span class="experience-phase">01 · BUILDING THE COMPANY</span>
+<div class="experience-header">
+<div>
+<img alt="GoVenture logo" class="experience-logo" src="GoVenture Logo.png"/>
+<h4>Founder &amp; Lead Developer</h4>
+<h5>Go Venture Int. · Philippines · Remote</h5>
+</div>
+<span class="experience-date">Current</span>
+</div>
+<p class="experience-description">Founded and led GoVenture, overseeing the company’s technical direction, product development, and overall software architecture.</p>
+<ul class="experience-description">
+<li>Led the end-to-end development of Vicinity SaaS, from initial system architecture and database design through implementation, testing, deployment, and production readiness.</li>
+<li>Designed and managed the application’s database architecture to support scalability, maintainability, and reliable data management.</li>
+<li>Established scalable development practices and technical foundations to transform Vicinity from an initial concept into a deployable and shippable SaaS product.</li>
+<li>Managed key technical decisions across frontend, backend, infrastructure, and database layers while guiding the project toward a production-ready platform.</li>
+</ul>
+<div class="experience-achievements">
+<span class="achievement-badge"><i class="bi bi-check-circle"></i> Product &amp; Technical Direction</span>
+<span class="achievement-badge"><i class="bi bi-check-circle"></i> Vicinity SaaS Development</span>
+<span class="achievement-badge"><i class="bi bi-check-circle"></i> System Architecture</span>
+<span class="achievement-badge"><i class="bi bi-check-circle"></i> Database Architecture</span>
+</div>
+<div class="experience-skills">
+<span class="skill-tag">SaaS</span>
+<span class="skill-tag">System Architecture</span>
+<span class="skill-tag">Database Design</span>
+<span class="skill-tag">Product Development</span>
+</div>
+</div>
+</div>
+<div class="experience-item">
+<div class="experience-icon">
+<i class="bi bi-briefcase-fill"></i>
+</div>
+<div class="experience-content">
+<span class="experience-phase">02 · ENTERPRISE DELIVERY</span>
+<div class="experience-header">
+<div>
+<img alt="Wizzard Technologies logo" class="experience-logo" src="new content/Experience client/Private.png"/>
+<h4>Full Stack Web Developer</h4>
+<h5>Wizzard Technologies INC - Ortigas, Pasig City</h5>
+</div>
+<span class="experience-date">July 2025 - Current</span>
+</div>
+<p class="experience-description">Developing and maintaining full-stack applications with Laravel, Vue.js, Android Studio, Oracle APEX, and Oracle Cloud Infrastructure for accounting, HRIS, financial management, and government systems.</p>
+<div aria-label="Client and project organizations" class="experience-client-rail">
+<span class="client-rail-label">Selected client work</span>
+<img alt="COPI Connects logo" src="new content/Experience client/COPi.png"/>
+<img alt="Department of Energy logo" src="new content/Experience client/DOE.png"/>
+<img alt="Philippine Center for Economic Development logo" src="new content/Experience client/PCED.png"/>
+<img alt="Central Bicol State University of Agriculture logo" src="new content/Experience client/CBSUA.png"/>
+<img alt="Quezon City logo" src="new content/Experience client/QC BRGY.jpg"/>
+<img alt="National Conciliation and Mediation Board logo" src="new content/Experience client/NCMB.png"/>
+<img alt="National Labor Relations Commission logo" src="new content/Experience client/NLRC.png"/>
+<img alt="DreamWave logo" src="new content/Experience client/DreamWave.png"/>
+<img alt="Wizzard Technologies logo" src="new content/Experience client/Private.png"/>
+</div>
+<ul class="experience-description">
+<li>Contributed to the development of the Accounting System for the University of the Philippines, focusing on both frontend and backend development using Laravel and Vue.js.</li>
+<li>Assisted in the creation of the RFID Android Application for the Department of Energy, enhancing application features and functionality using Android Studio.</li>
+<li>Developed the CBSUA Financial Management System, streamlining financial operations for Central Bicol State University of Agriculture.</li>
+<li>Designed and developed a Modern Financial Management System for private companies, implementing scalable architecture for improved financial tracking and reporting.</li>
+<li>Created and developed the Barangay Accounting System for Quezon City barangays, improving financial management, reporting, and accounting processes for local government units.</li>
+<li>Designed and developed the Dreamwave Hotel Mobile Room Service Management Application using Android Studio, including room service management, room checklists, camera-integrated functionality, and API integrations.</li>
+<li>Designed and developed the ePortal System for the National Conciliation and Mediation Board and National Labor Relations Commission, implementing Overtime Applications, Leave Applications, Personal Data Sheet completion, and report generation for the 2025 and 2026 system versions.</li>
+<li>Developed and migrated the COPI.ph website to Oracle APEX within Oracle Cloud Infrastructure, supporting the transition of website functionality to the Oracle APEX environment.</li>
+</ul>
+<div class="experience-achievements">
+<span class="achievement-badge"><i class="bi bi-check-circle"></i> Full-Stack Web Development</span>
+<span class="achievement-badge"><i class="bi bi-check-circle"></i> Laravel Backend Development</span>
+<span class="achievement-badge"><i class="bi bi-check-circle"></i> Vue.js Frontend Development</span>
+<span class="achievement-badge"><i class="bi bi-check-circle"></i> Android Studio Development</span>
+<span class="achievement-badge"><i class="bi bi-check-circle"></i> Oracle APEX &amp; OCI Development</span>
+</div>
+<div class="experience-skills">
+<span class="skill-tag">Laravel</span>
+<span class="skill-tag">Vue.js</span>
+<span class="skill-tag">Android Studio</span>
+<span class="skill-tag">SSMS</span>
+<span class="skill-tag">PHP</span>
+<span class="skill-tag">JavaScript</span>
+<span class="skill-tag">Oracle APEX</span>
+<span class="skill-tag">OCI</span>
+</div>
+</div>
+</div>
+<div class="experience-item">
+<div class="experience-icon">
+<i class="bi bi-briefcase-fill"></i>
+</div>
+<div class="experience-content">
+<span class="experience-phase">03 · BUSINESS SYSTEMS</span>
+<div class="experience-header">
+<div>
+<img alt="Systema Solutions Canada logo" class="experience-logo" src="new content/Experience client/systema.jpg"/>
+<h4>Technical Consultant - Microsoft Business Central</h4>
+<h5>Systema Solutions Canada (Internship)</h5>
+</div>
+<span class="experience-date">January 2025 - April 2025</span>
+</div>
+<p class="experience-description">Provided support and optimization for Microsoft Business Central business solutions. Contributed to AL programming to customize and extend Business Central functionality. Performed data analysis and reporting with Power BI, providing insights to support better decision-making.</p>
+<div class="experience-achievements">
+<span class="achievement-badge"><i class="bi bi-check-circle"></i> AL Programming for Business Central</span>
+<span class="achievement-badge"><i class="bi bi-check-circle"></i> Power BI Data Analysis</span>
+<span class="achievement-badge"><i class="bi bi-check-circle"></i> Business Solution Optimization</span>
+</div>
+<div class="experience-skills">
+<span class="skill-tag">AL Programming</span>
+<span class="skill-tag">Power BI</span>
+<span class="skill-tag">Microsoft Business Central</span>
+<span class="skill-tag">Data Analysis</span>
+</div>
+</div>
+</div>
+<div class="experience-item">
+<div class="experience-icon">
+<i class="bi bi-briefcase-fill"></i>
+</div>
+<div class="experience-content">
+<span class="experience-phase">04 · PRODUCT ENGINEERING</span>
+<div class="experience-header">
+<div>
+<img alt="MotoNation logo" class="experience-logo" src="new content/Experience client/motonation.jpg"/>
+<h4>Fullstack Developer - ASP.NET Web POS System</h4>
+<h5>MotoNation (Project-Based Work)</h5>
+</div>
+<span class="experience-date">July 2023 - December 2024</span>
+</div>
+<p class="experience-description">Focused on developing backend functionalities for the POS system. Managed SSMS database, including creating triggers and stored procedures. Implemented audit trailing features for system integrity, built reports using RDLC, and designed dashboards for improved data visualization and decision-making.</p>
+<div class="experience-achievements">
+<span class="achievement-badge"><i class="bi bi-check-circle"></i> Backend Development for POS System</span>
+<span class="achievement-badge"><i class="bi bi-check-circle"></i> Database Management &amp; Optimization</span>
+<span class="achievement-badge"><i class="bi bi-check-circle"></i> RDLC Reporting Implementation</span>
+<span class="achievement-badge"><i class="bi bi-check-circle"></i> Dashboard Design &amp; Development</span>
+</div>
+<div class="experience-skills">
+<span class="skill-tag">ASP.NET</span>
+<span class="skill-tag">C#</span>
+<span class="skill-tag">SSMS</span>
+<span class="skill-tag">RDLC</span>
+<span class="skill-tag">SQL</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Education Section -->
+<section class="py-5" id="education">
+<div class="container">
+<div class="row">
+<div class="col-lg-12 text-center mb-5"><p class="eyebrow">04 / EDUCATION</p><h2 class="section-title">Foundation &amp; continuous growth.</h2><div class="title-underline"></div><p class="section-intro">Formal Computer Science training supported by hands-on delivery across modern software stacks.</p></div>
+</div>
+<div class="row">
+<div class="col-lg-10 mx-auto">
+<div class="timeline">
+<div class="timeline-item">
+<div class="timeline-icon">
+<i class="bi bi-mortarboard"></i>
+</div>
+<div class="timeline-content">
+<h4>Bachelor of Science in Computer Science</h4>
+<h5>STI College Novaliches / STI College Marikina</h5>
+<span class="timeline-date">2021 - 2025</span>
+<p>Graduated with Latin honors (Cum Laude). Achievements include President's Dean's Lister, Most Commendable System Analyst, Best Software Quality Assurance, and Certificate of Appreciation for Peer Evaluation.</p>
+</div>
+</div>
+<div class="timeline-item">
+<div class="timeline-icon">
+<i class="bi bi-mortarboard"></i>
+</div>
+<div class="timeline-content">
+<h4>Accountancy Business and Management</h4>
+<h5>Siena College of Taytay</h5>
+<span class="timeline-date">2019 - 2021</span>
+<p>Completed senior high school program in Accountancy Business and Management track.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Awards Section -->
+<section class="py-5 bg-light" id="awards">
+<div class="container">
+<div class="row">
+<div class="col-lg-12 text-center mb-5"><p class="eyebrow">05 / RECOGNITION</p><h2 class="section-title">Milestones that shaped the work.</h2><div class="title-underline"></div><p class="section-intro">Academic and professional recognition that reflects consistency, leadership, and technical growth.</p></div>
+</div>
+<div class="row g-4">
+<div class="col-md-6 col-lg-4">
+<div class="award-card">
+<div class="award-icon">
+<i class="bi bi-trophy-fill"></i>
+</div>
+<h4>Latin Honors (Cum Laude)</h4>
+<h5>STI College</h5>
+<p>Graduated with honors for outstanding academic performance.</p>
+<span class="award-date">2025</span>
+</div>
+</div>
+<div class="col-md-6 col-lg-4">
+<div class="award-card">
+<div class="award-icon">
+<i class="bi bi-star-fill"></i>
+</div>
+<h4>Best Software Quality Assurance</h4>
+<h5>STI College</h5>
+<p>Recognized for excellence in software quality assurance practices.</p>
+<span class="award-date">2025</span>
+</div>
+</div>
+<div class="col-md-6 col-lg-4">
+<div class="award-card">
+<div class="award-icon">
+<i class="bi bi-award-fill"></i>
+</div>
+<h4>Most Commendable System Analyst</h4>
+<h5>STI College</h5>
+<p>Awarded for outstanding performance in system analysis.</p>
+<span class="award-date">2025</span>
+</div>
+</div>
+<div class="col-md-6 col-lg-4">
+<div class="award-card">
+<div class="award-icon">
+<i class="bi bi-trophy-fill"></i>
+</div>
+<h4>Most Commendable Information Management Project</h4>
+<h5>STI College</h5>
+<p>Recognized for excellence in information management project development.</p>
+<span class="award-date">2025</span>
+</div>
+</div>
+<div class="col-md-6 col-lg-4">
+<div class="award-card">
+<div class="award-icon">
+<i class="bi bi-star-fill"></i>
+</div>
+<h4>President's Dean's Lister</h4>
+<h5>STI College</h5>
+<p>Achieved consistent academic excellence throughout studies.</p>
+<span class="award-date">2021-2025</span>
+</div>
+</div>
+<div class="col-md-6 col-lg-4">
+<div class="award-card">
+<div class="award-icon">
+<i class="bi bi-award-fill"></i>
+</div>
+<h4>Certificate of Appreciation for Peer Evaluation</h4>
+<h5>STI College</h5>
+<p>Recognized for valuable contributions to peer evaluation processes.</p>
+<span class="award-date">2025</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Contact Section -->
+<section class="py-5" id="contact">
+<div class="container">
+<div class="row">
+<div class="col-lg-12 text-center mb-5"><p class="eyebrow">06 / CONTACT</p><h2 class="section-title">Have a system worth building?</h2><div class="title-underline"></div><p class="section-intro">Let’s talk about products, enterprise applications, backend systems, integrations, or software that needs to move from idea to production.</p></div>
+</div>
+<div class="row">
+<div class="col-lg-8 mx-auto">
+<div class="row g-4 mb-5">
+<div class="col-md-4 text-center">
+<div class="contact-info">
+<div class="contact-icon">
+<i class="bi bi-envelope-fill"></i>
+</div>
+<h5>Email</h5>
+<p><a href="mailto:andalpapi33@gmail.com">andalpapi33@gmail.com</a></p>
+</div>
+</div>
+<div class="col-md-4 text-center">
+<div class="contact-info">
+<div class="contact-icon">
+<i class="bi bi-telephone-fill"></i>
+</div>
+<h5>Phone</h5>
+<p><a href="tel:+639616198038">+63 961 619 8038</a></p>
+</div>
+</div>
+<div class="col-md-4 text-center">
+<div class="contact-info">
+<div class="contact-icon">
+<i class="bi bi-geo-alt-fill"></i>
+</div>
+<h5>Location</h5>
+<p>Pasig City, Philippines</p>
+</div>
+</div>
+</div>
+<form class="contact-form" id="contactForm"><div class="form-intro"><span>START A CONVERSATION</span><h3>Tell me what you're building.</h3><p>I’ll get back to you using the contact details you provide.</p></div>
+<div class="row g-3">
+<div class="col-md-6">
+<input class="form-control" id="from_name" name="from_name" placeholder="Your Name" required="" type="text"/>
+</div>
+<div class="col-md-6">
+<input class="form-control" id="from_email" name="from_email" placeholder="Your Email" required="" type="email"/>
+</div>
+<div class="col-12">
+<input class="form-control" id="subject" name="subject" placeholder="Subject" required="" type="text"/>
+</div>
+<div class="col-12">
+<textarea class="form-control" id="message" name="message" placeholder="Your Message" required="" rows="5"></textarea>
+</div>
+<div class="col-12 text-center">
+<div class="mb-3" id="formMessage"></div>
+<button class="btn btn-primary btn-lg" type="submit">Send message <i class="bi bi-arrow-up-right"></i></button>
+</div>
+</div>
+</form>
+<div class="text-center mt-4">
+<a class="btn btn-outline-primary btn-lg" download="" href="Christian_Miguel_Andal_Resume.pdf">
                             Download Resume
                         </a>
-                    </div>
-                    <div class="social-links text-center mt-5">
-                        <a href="https://github.com/ChristianAndal" class="social-link" target="_blank"><i class="bi bi-github"></i></a>
-                        <a href="https://www.linkedin.com/in/christian-andal-928a9a2b4" class="social-link" target="_blank"><i class="bi bi-linkedin"></i></a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Project Modal -->
-    <div class="modal fade" id="projectModal" tabindex="-1" aria-labelledby="projectModalLabel" aria-hidden="true">
-        <div class="modal-dialog modal-dialog-centered modal-lg">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title" id="projectModalLabel">Project Details</h5>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                </div>
-                <div class="modal-body">
-                    <div class="project-modal-content">
-                        <div class="project-modal-image mb-4">
-                            <!-- Main Image Carousel -->
-                            <div id="projectCarousel" class="carousel slide" data-bs-ride="carousel">
-                                <div class="carousel-inner" id="carouselInner">
-                                    <!-- Images will be dynamically inserted here -->
-                                </div>
-                                <button class="carousel-control-prev" type="button" data-bs-target="#projectCarousel" data-bs-slide="prev">
-                                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                                    <span class="visually-hidden">Previous</span>
-                                </button>
-                                <button class="carousel-control-next" type="button" data-bs-target="#projectCarousel" data-bs-slide="next">
-                                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                                    <span class="visually-hidden">Next</span>
-                                </button>
-                            </div>
-                            <!-- Image Gallery Thumbnails -->
-                            <div class="project-gallery-thumbnails mt-3" id="galleryThumbnails">
-                                <!-- Thumbnails will be dynamically inserted here -->
-                            </div>
-                        </div>
-                        <h3 id="modalProjectTitle" class="mb-3"></h3>
-                        <p id="modalProjectDescription" class="text-muted mb-4"></p>
-                        <div class="project-modal-tags mb-4">
-                            <h5 class="mb-3">Technologies Used:</h5>
-                            <div id="modalProjectTags" class="d-flex flex-wrap gap-2"></div>
-                        </div>
-                        <div class="project-modal-features">
-                            <h5 class="mb-3">Key Features:</h5>
-                            <ul id="modalProjectFeatures" class="list-unstyled"></ul>
-                        </div>
-                        <div class="project-modal-links mt-4 pt-4 border-top">
-                            <a id="modalProjectLink" href="#" target="_blank" class="btn btn-primary me-2">
-                                <i class="bi bi-link-45deg"></i> View Project
+</div>
+<div class="social-links text-center mt-5">
+<a class="social-link" href="https://github.com/ChristianAndal" target="_blank"><i class="bi bi-github"></i></a>
+<a class="social-link" href="https://www.linkedin.com/in/christian-andal-928a9a2b4" target="_blank"><i class="bi bi-linkedin"></i></a>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Project Modal -->
+<div aria-hidden="true" aria-labelledby="modalProjectTitle" class="modal fade" id="projectModal" tabindex="-1">
+<div class="modal-dialog modal-dialog-centered modal-xl">
+<div class="modal-content">
+<div class="modal-header">
+<h5 class="modal-title" id="projectModalLabel">Project Details</h5>
+<button aria-label="Close" class="btn-close" data-bs-dismiss="modal" type="button"></button>
+</div>
+<div class="modal-body">
+<div class="project-modal-content">
+<div class="modal-project-eyebrow">Project case study <span></span> <strong id="modalProjectCounter">01 / 01</strong></div>
+<div class="project-modal-image mb-4">
+<!-- Main Image Carousel -->
+<div class="carousel slide" data-bs-ride="carousel" id="projectCarousel">
+<div class="carousel-inner" id="carouselInner">
+<!-- Images will be dynamically inserted here -->
+</div>
+<button class="carousel-control-prev" data-bs-slide="prev" data-bs-target="#projectCarousel" type="button">
+<span aria-hidden="true" class="carousel-control-prev-icon"></span>
+<span class="visually-hidden">Previous</span>
+</button>
+<button class="carousel-control-next" data-bs-slide="next" data-bs-target="#projectCarousel" type="button">
+<span aria-hidden="true" class="carousel-control-next-icon"></span>
+<span class="visually-hidden">Next</span>
+</button>
+</div>
+<!-- Image Gallery Thumbnails -->
+<div class="project-gallery-thumbnails mt-3" id="galleryThumbnails">
+<!-- Thumbnails will be dynamically inserted here -->
+</div>
+</div>
+<h3 class="mb-3" id="modalProjectTitle"></h3>
+<p class="text-muted mb-4" id="modalProjectDescription"></p>
+<div class="project-modal-tags mb-4">
+<h5 class="mb-3">Technologies Used:</h5>
+<div class="d-flex flex-wrap gap-2" id="modalProjectTags"></div>
+</div>
+<div class="project-modal-features">
+<h5 class="mb-3">Key Features:</h5>
+<ul class="list-unstyled" id="modalProjectFeatures"></ul>
+</div>
+<div class="project-modal-links mt-4 pt-4 border-top">
+<a class="btn btn-primary me-2" href="#" id="modalProjectLink" target="_blank">
+<i class="bi bi-link-45deg"></i> View Project
                             </a>
-                            <a id="modalProjectGithub" href="#" target="_blank" class="btn btn-outline-dark">
-                                <i class="bi bi-github"></i> View on GitHub
+<a class="btn btn-outline-dark" href="#" id="modalProjectGithub" target="_blank">
+<i class="bi bi-github"></i> View on GitHub
                             </a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <!-- Footer -->
-    <footer class="bg-dark text-white py-4">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-6 text-center text-md-start">
-                    <p class="mb-0">&copy; 2024 Portfolio. All rights reserved.</p>
-                </div>
-                <div class="col-md-6 text-center text-md-end">
-                    <p class="mb-0">Designed with <i class="bi bi-heart-fill text-danger"></i> by Christian Miguel M. Andal</p>
-                </div>
-            </div>
-        </div>
-    </footer>
-
-    <!-- Bootstrap JS -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-    <!-- EmailJS -->
-    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
-    <!-- Custom JS -->
-    <script src="script.js"></script>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Footer -->
+<footer class="bg-dark text-white py-4">
+<div class="container">
+<div class="row">
+<div class="col-md-6 text-center text-md-start">
+<p class="mb-0">© 2026 Christian Miguel M. Andal.</p>
+</div>
+<div class="col-md-6 text-center text-md-end">
+<p class="mb-0">Designed &amp; engineered with intent.</p>
+</div>
+</div>
+</div>
+</footer>
+<!-- Bootstrap JS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+<!-- GSAP animation runtime -->
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
+<script src="animations/gsap.js"></script>
+<!-- Custom JS -->
+<script src="script.js"></script>
 </body>
 </html>
-

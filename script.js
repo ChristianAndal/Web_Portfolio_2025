@@ -1,31 +1,24 @@
 // Smooth scrolling for navigation links
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', function (e) {
+        const href = this.getAttribute('href');
+        if (!href || href === '#') return;
+        const target = document.querySelector(href);
+        if (!target) return;
         e.preventDefault();
-        const target = document.querySelector(this.getAttribute('href'));
-        if (target) {
-            const offsetTop = target.offsetTop - 70;
-            window.scrollTo({
-                top: offsetTop,
-                behavior: 'smooth'
-            });
-        }
+        const offsetTop = target.offsetTop - 82;
+        window.scrollTo({
+            top: offsetTop,
+            behavior: window.matchMedia('(prefers-reduced-motion: reduce)').matches ? 'auto' : 'smooth'
+        });
     });
 });
 
-// Navbar background on scroll
+// Navbar state on scroll
 window.addEventListener('scroll', function() {
     const navbar = document.querySelector('.navbar');
-    if (window.scrollY > 50) {
-        navbar.style.backgroundColor = 'rgba(30, 41, 59, 0.98)';
-        navbar.style.backdropFilter = 'blur(20px) saturate(180%)';
-        navbar.style.boxShadow = '0 4px 30px rgba(0, 0, 0, 0.2)';
-    } else {
-        navbar.style.backgroundColor = 'rgba(30, 41, 59, 0.95)';
-        navbar.style.backdropFilter = 'blur(20px) saturate(180%)';
-        navbar.style.boxShadow = '0 4px 30px rgba(0, 0, 0, 0.1)';
-    }
-});
+    if (navbar) navbar.classList.toggle('is-scrolled', window.scrollY > 40);
+}, { passive: true });
 
 // Active nav link highlighting
 const sections = document.querySelectorAll('section[id]');
@@ -49,32 +42,57 @@ window.addEventListener('scroll', function() {
     });
 });
 
-// EmailJS Configuration
-// IMPORTANT: Replace these with your actual EmailJS credentials!
-// Get them from: https://www.emailjs.com/
-const EMAILJS_CONFIG = {
-    PUBLIC_KEY: "YOUR_PUBLIC_KEY",        // Replace with your Public Key from EmailJS dashboard
-    SERVICE_ID: "YOUR_SERVICE_ID",        // Replace with your Service ID
-    TEMPLATE_ID: "YOUR_TEMPLATE_ID"       // Replace with your Template ID
-};
-
-// Initialize EmailJS when library is loaded
-window.addEventListener('load', function() {
-    if (typeof emailjs !== 'undefined') {
-        // Check if Public Key is configured
-        if (EMAILJS_CONFIG.PUBLIC_KEY === "YOUR_PUBLIC_KEY") {
-            console.warn('EmailJS not configured! Please update EMAILJS_CONFIG in script.js');
-        } else {
-            emailjs.init(EMAILJS_CONFIG.PUBLIC_KEY);
-            console.log('EmailJS initialized successfully');
-        }
-    } else {
-        console.error('EmailJS library not loaded!');
-    }
-});
-
-// Contact form submission with EmailJS
+// Simple contact form submission through FormSubmit.
+// No serverless function, API key, or email library is required.
 const contactForm = document.getElementById('contactForm');
+if (contactForm) {
+    contactForm.addEventListener('submit', async function (event) {
+        event.preventDefault();
+
+        const form = event.currentTarget;
+        const formMessage = document.getElementById('formMessage');
+        const submitBtn = form.querySelector('button[type="submit"]');
+        const originalText = submitBtn.innerHTML;
+
+        submitBtn.disabled = true;
+        submitBtn.innerHTML = '<i class="bi bi-hourglass-split"></i> Sending...';
+        formMessage.innerHTML = '';
+
+        try {
+            const response = await fetch('https://formsubmit.co/ajax/andalpapi33@gmail.com', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                    Accept: 'application/json'
+                },
+                body: JSON.stringify({
+                    name: form.from_name.value,
+                    email: form.from_email.value,
+                    subject: form.subject.value,
+                    message: form.message.value,
+                    _subject: `Portfolio inquiry: ${form.subject.value}`,
+                    _captcha: 'true'
+                })
+            });
+
+            if (!response.ok) throw new Error('Unable to send message.');
+
+            formMessage.innerHTML = '<div class="alert alert-success"><i class="bi bi-check-circle"></i> Thanks for reaching out. Your inquiry has been received, and I\'ll get back to you soon.</div>';
+            submitBtn.innerHTML = '<i class="bi bi-check-circle"></i> Request received';
+            form.reset();
+        } catch (error) {
+            console.error('Contact form error:', error);
+            formMessage.innerHTML = '<div class="alert alert-danger"><i class="bi bi-exclamation-triangle"></i> We couldn\'t send your message right now. Please email <a href="mailto:andalpapi33@gmail.com">andalpapi33@gmail.com</a>.</div>';
+            submitBtn.innerHTML = originalText;
+        } finally {
+            submitBtn.disabled = false;
+            setTimeout(() => { submitBtn.innerHTML = originalText; }, 5000);
+        }
+    });
+}
+
+/* Legacy EmailJS handler retained only as a comment for old references.
+const legacyContactForm = document.getElementById('contactForm');
 if (contactForm) {
     contactForm.addEventListener('submit', function(e) {
         e.preventDefault();
@@ -88,7 +106,7 @@ if (contactForm) {
         if (EMAILJS_CONFIG.PUBLIC_KEY === "YOUR_PUBLIC_KEY" || 
             EMAILJS_CONFIG.SERVICE_ID === "YOUR_SERVICE_ID" || 
             EMAILJS_CONFIG.TEMPLATE_ID === "YOUR_TEMPLATE_ID") {
-            formMessage.innerHTML = '<div class="alert alert-warning"><i class="bi bi-exclamation-triangle"></i> EmailJS is not configured yet. Please check the console for setup instructions or email me directly at <a href="mailto:christianmiguelandal@gmail.com">christianmiguelandal@gmail.com</a></div>';
+            formMessage.innerHTML = '<div class="alert alert-warning"><i class="bi bi-exclamation-triangle"></i> Email service is not configured yet. Please email me directly at <a href="mailto:andalpapi33@gmail.com">andalpapi33@gmail.com</a></div>';
             console.error('EmailJS Configuration Missing!');
             console.log('Please update EMAILJS_CONFIG in script.js with your credentials from https://www.emailjs.com/');
             return;
@@ -96,7 +114,7 @@ if (contactForm) {
         
         // Check if EmailJS is loaded
         if (typeof emailjs === 'undefined') {
-            formMessage.innerHTML = '<div class="alert alert-danger"><i class="bi bi-exclamation-triangle"></i> EmailJS library not loaded. Please refresh the page or email me directly at <a href="mailto:christianmiguelandal@gmail.com">christianmiguelandal@gmail.com</a></div>';
+            formMessage.innerHTML = '<div class="alert alert-danger"><i class="bi bi-exclamation-triangle"></i> Please refresh the page or email me directly at <a href="mailto:andalpapi33@gmail.com">andalpapi33@gmail.com</a></div>';
             return;
         }
         
@@ -106,7 +124,7 @@ if (contactForm) {
             from_email: document.getElementById('from_email').value,
             subject: document.getElementById('subject').value,
             message: document.getElementById('message').value,
-            to_email: 'christianmiguelandal@gmail.com' // Your Gmail address
+            to_email: 'andalpapi33@gmail.com' // Your Gmail address
         };
 
         // Validation
@@ -161,13 +179,15 @@ if (contactForm) {
                     errorMessage += 'Please try again later or email me directly.';
                 }
                 
-                formMessage.innerHTML = `<div class="alert alert-danger"><i class="bi bi-exclamation-triangle"></i> ${errorMessage} <br><small>Or email me directly at <a href="mailto:christianmiguelandal@gmail.com">christianmiguelandal@gmail.com</a></small></div>`;
+                formMessage.innerHTML = `<div class="alert alert-danger"><i class="bi bi-exclamation-triangle"></i> ${errorMessage} <br><small>Or email me directly at <a href="mailto:andalpapi33@gmail.com">andalpapi33@gmail.com</a></small></div>`;
                 submitBtn.innerHTML = originalText;
                 submitBtn.disabled = false;
                 submitBtn.style.background = '';
             });
     });
 }
+
+*/
 
 // Add shake animation
 const style = document.createElement('style');
@@ -180,150 +200,7 @@ style.textContent = `
 `;
 document.head.appendChild(style);
 
-// Intersection Observer for fade-in animations
-const observerOptions = {
-    threshold: 0.1,
-    rootMargin: '0px 0px -50px 0px'
-};
-
-const observer = new IntersectionObserver(function(entries) {
-    entries.forEach(entry => {
-        if (entry.isIntersecting) {
-            entry.target.classList.add('fade-in');
-            observer.unobserve(entry.target);
-        }
-    });
-}, observerOptions);
-
-// Observe all sections and cards
-document.addEventListener('DOMContentLoaded', function() {
-    const elementsToAnimate = document.querySelectorAll(
-        '.project-card, .timeline-item, .award-card, .about-image, .contact-info'
-    );
-    
-    elementsToAnimate.forEach(el => {
-        observer.observe(el);
-    });
-});
-
-// Add typing effect to hero heading
-function typeWriter(element, text, speed = 85) {
-    if (!element || !text) {
-        return;
-    }
-
-    if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
-        element.textContent = text;
-        element.classList.add('is-complete');
-        return;
-    }
-
-    let index = 0;
-    element.textContent = '';
-    element.classList.remove('is-complete');
-
-    function typeNextCharacter() {
-        if (index < text.length) {
-            element.textContent += text.charAt(index);
-            index += 1;
-            setTimeout(typeNextCharacter, speed);
-            return;
-        }
-
-        element.classList.add('is-complete');
-    }
-
-    typeNextCharacter();
-}
-
-function loopTypingRoles(element, roles, typingSpeed = 70, deletingSpeed = 40, pauseDuration = 1600) {
-    if (!element || !roles.length) {
-        return;
-    }
-
-    if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
-        element.textContent = roles[0];
-        return;
-    }
-
-    let roleIndex = 0;
-    let charIndex = 0;
-    let isDeleting = false;
-
-    function tick() {
-        const currentRole = roles[roleIndex];
-
-        if (isDeleting) {
-            charIndex -= 1;
-            element.textContent = currentRole.slice(0, charIndex);
-        } else {
-            charIndex += 1;
-            element.textContent = currentRole.slice(0, charIndex);
-        }
-
-        let delay = isDeleting ? deletingSpeed : typingSpeed;
-
-        if (!isDeleting && charIndex === currentRole.length) {
-            delay = pauseDuration;
-            isDeleting = true;
-        } else if (isDeleting && charIndex === 0) {
-            isDeleting = false;
-            roleIndex = (roleIndex + 1) % roles.length;
-            delay = 350;
-        }
-
-        setTimeout(tick, delay);
-    }
-
-    element.textContent = '';
-    tick();
-}
-
-// Initialize typing effect on page load
-window.addEventListener('load', function() {
-    const heroTitle = document.querySelector('.typing-text');
-    if (heroTitle) {
-        const titleText = heroTitle.dataset.text || heroTitle.textContent.trim();
-        typeWriter(heroTitle, titleText, 90);
-    }
-
-    const heroRole = document.querySelector('.role-typing-text');
-    if (heroRole) {
-        const roles = (heroRole.dataset.roles || heroRole.textContent)
-            .split('|')
-            .map(role => role.trim())
-            .filter(Boolean);
-        loopTypingRoles(heroRole, roles, 75, 42, 1500);
-    }
-});
-
-// Add parallax effect to hero section
-window.addEventListener('scroll', function() {
-    const scrolled = window.pageYOffset;
-    const heroSection = document.querySelector('.hero-section');
-    const heroContent = document.querySelector('.hero-content');
-    const heroImage = document.querySelector('.hero-image');
-    
-    if (heroSection && scrolled < heroSection.offsetHeight) {
-        if (heroContent) {
-            heroContent.style.opacity = 1 - (scrolled / heroSection.offsetHeight) * 0.5;
-            heroContent.style.transform = `translateY(${scrolled * 0.2}px)`;
-        }
-        
-        if (heroImage) {
-            heroImage.style.transform = `translateY(${scrolled * 0.15}px) scale(${1 - scrolled / heroSection.offsetHeight * 0.1})`;
-        }
-    } else {
-        if (heroContent) {
-            heroContent.style.opacity = '';
-            heroContent.style.transform = '';
-        }
-
-        if (heroImage) {
-            heroImage.style.transform = '';
-        }
-    }
-});
+// Section reveal and hero motion are handled by animations/gsap.js.
 
 // Mobile menu close on link click
 const navLinksMobile = document.querySelectorAll('.navbar-nav .nav-link');
@@ -340,23 +217,30 @@ navLinksMobile.forEach(link => {
     });
 });
 
-// Add hover effect to skill badges
-document.querySelectorAll('.skill-badge').forEach(badge => {
-    badge.addEventListener('mouseenter', function() {
-        this.style.transform = 'translateY(-3px) scale(1.05)';
-    });
-    
-    badge.addEventListener('mouseleave', function() {
-        this.style.transform = 'translateY(0) scale(1)';
-    });
-});
+// Skill hover states are handled in CSS to avoid inline transform conflicts.
 
 // Project Modal Functionality
 const projectData = {
+    'vicinity': {
+        title: 'Vicinity — Multi-Tenant SaaS POS',
+        description: 'Vicinity is an online SaaS point-of-sale platform developed by GoVenture for multi-tenant businesses. Built with Django and Python, PostgreSQL, and Vue.js, it combines real-time operational workflows with a hybrid database architecture for a responsive and flexible POS experience.',
+        images: ['VIcinity/1.png', 'VIcinity/2.jpeg', 'VIcinity/4.jpeg', 'VIcinity/5.jpeg', 'VIcinity/6.jpeg', 'VIcinity/3.jpeg'],
+        tags: ['Django', 'Python', 'PostgreSQL', 'Vue.js', 'SaaS', 'Multi-Tenant'],
+        features: [
+            'Multi-tenant SaaS architecture with dedicated business workspaces',
+            'Real-time point-of-sale and operational workflows',
+            'Hybrid database architecture for flexible data handling',
+            'Django and Python backend with PostgreSQL persistence',
+            'Vue.js interface for POS, product catalog, and business management',
+            'Workspace onboarding, subscription plans, and sales analytics'
+        ],
+        link: '#',
+        github: '#'
+    },
     'goventure': {
         title: 'GoVenture ERP',
         description: 'Enterprise Resource Planning system developed using Python Django framework with SSMS database integration. Streamlining business processes and operations management for enhanced efficiency and productivity.',
-        images: ['Goventure/goventure.jpg'],
+        images: ['Goventure/1.png', 'Goventure/2.png', 'Goventure/3.png', 'Goventure/4.png'],
         tags: ['Python', 'Django', 'SSMS'],
         features: [
             'Comprehensive ERP solution for business management',
@@ -413,6 +297,22 @@ const projectData = {
         link: '#',
         github: '#'
     },
+    'healthcare-management': {
+        title: 'Health Care Management System',
+        description: 'A healthcare and clinic management platform developed with Python and Django to centralize patient information, appointments, medical records, staff operations, and day-to-day clinic workflows. The system is designed to make healthcare administration more organized, accessible, and efficient through a unified interface backed by SQLite.',
+        images: ['new content/care/1.png', 'new content/care/2.jpeg', 'new content/care/3.jpeg'],
+        tags: ['Python', 'Django', 'SQLite'],
+        features: [
+            'Patient profile and information management',
+            'Appointment scheduling and workflow management',
+            'Centralized medical records and patient history',
+            'Staff and clinic operations management',
+            'Organized day-to-day clinic workflows',
+            'Django-based backend with SQLite data storage'
+        ],
+        link: '#',
+        github: '#'
+    },
     'company-management': {
         title: 'Company Management System with QR Code Attendance',
         description: 'PHP-based system with QR code attendance to automate attendance tracking. Utilized HTML, CSS, JavaScript, and XAMPP for frontend and backend development.',
@@ -465,6 +365,15 @@ document.addEventListener('DOMContentLoaded', function() {
                 openProjectModal(projectData[projectId]);
             }
         });
+
+        card.addEventListener('keydown', function(e) {
+            if (e.key !== 'Enter' && e.key !== ' ') return;
+            e.preventDefault();
+            const projectId = this.getAttribute('data-project');
+            if (projectId && projectData[projectId]) {
+                openProjectModal(projectData[projectId]);
+            }
+        });
         
         // Prevent card click when clicking on project links
         const projectLinks = card.querySelectorAll('.project-link');
@@ -489,8 +398,14 @@ function openProjectModal(project) {
     // Update modal content
     document.getElementById('modalProjectTitle').textContent = project.title;
     document.getElementById('modalProjectDescription').textContent = project.description;
-    document.getElementById('modalProjectLink').href = project.link;
-    document.getElementById('modalProjectGithub').href = project.github;
+    const projectLink = document.getElementById('modalProjectLink');
+    const githubLink = document.getElementById('modalProjectGithub');
+    projectLink.href = project.link || '#';
+    githubLink.href = project.github || '#';
+    projectLink.hidden = !project.link || project.link === '#';
+    githubLink.hidden = !project.github || project.github === '#';
+    const modalCounter = document.getElementById('modalProjectCounter');
+    if (modalCounter) modalCounter.textContent = `01 / ${String(project.images?.length || 0).padStart(2, '0')}`;
     
     // Update carousel with images
     const carouselInner = document.getElementById('carouselInner');
@@ -503,7 +418,7 @@ function openProjectModal(project) {
             // Create carousel item
             const carouselItem = document.createElement('div');
             carouselItem.className = `carousel-item ${index === 0 ? 'active' : ''}`;
-            carouselItem.innerHTML = `<img src="${image}" alt="${project.title} - Image ${index + 1}" class="d-block w-100 rounded">`;
+            carouselItem.innerHTML = `<img src="${image}" alt="${project.title} - Image ${index + 1}" class="d-block w-100 rounded" loading="lazy">`;
             carouselInner.appendChild(carouselItem);
             
             // Create thumbnail
@@ -522,6 +437,7 @@ function openProjectModal(project) {
                 if (carousel) {
                     carousel.to(index);
                 }
+                if (modalCounter) modalCounter.textContent = `${String(index + 1).padStart(2, '0')} / ${String(project.images.length).padStart(2, '0')}`;
             });
             galleryThumbnails.appendChild(thumbnail);
         });
@@ -566,11 +482,11 @@ function openProjectModal(project) {
             thumbnails.forEach((thumb, index) => {
                 thumb.classList.toggle('active', index === activeIndex);
             });
+            if (modalCounter) modalCounter.textContent = `${String(activeIndex + 1).padStart(2, '0')} / ${String(project.images.length).padStart(2, '0')}`;
         });
     }
 }
 
 // Console message
-console.log('%c Welcome to My Portfolio! ', 'background: #007bff; color: white; font-size: 20px; padding: 10px;');
-console.log('%c Let\'s build something amazing together! ', 'background: #764ba2; color: white; font-size: 14px; padding: 5px;');
+console.log('%c Christian Andal · Software Engineer ', 'background:#0a1020;color:#d5f16a;font-size:14px;padding:8px 12px;border-radius:6px;');
 

@@ -428,6 +428,7 @@ section:not(.hero-section) .section-title {
 #experience .experience-skills { display: flex; flex-wrap: wrap; justify-content: flex-start !important; gap: .35rem; margin-top: .7rem; }
 #experience .skill-tag { padding: .32rem .48rem; border: 1px solid var(--upgrade-line); border-radius: 7px; color: var(--upgrade-muted); background: transparent; font-size: .59rem; font-weight: 700; }
 #experience .experience-client-rail { justify-content: flex-start !important; }
+#experience .client-alias { display: inline-flex; align-items: center; min-height: 28px; padding: .36rem .58rem; border: 1px solid var(--upgrade-line); border-radius: 999px; color: var(--upgrade-green); background: rgba(76,118,43,.05); font-size: .62rem; font-weight: 800; letter-spacing: .02em; }
 
 /* ---------- Education / awards ---------- */
 #education .timeline { max-width: 900px; margin: 0 auto; }
